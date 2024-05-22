@@ -18,7 +18,7 @@ public class DriverManager {
                 break;
             case "Firefox":
                 driver = new FirefoxDriver();
-                System.out.println("Firefix was initiated");
+                System.out.println("Firefox was initiated");
                 break;
             case "Safari":
                 driver = new SafariDriver();
@@ -34,7 +34,7 @@ public class DriverManager {
     }
 
     public static DriverManager getInstance(){
-        if (instance == 0){
+        if (instance == null){
             instance = new DriverManager();
         }
         return instance;
