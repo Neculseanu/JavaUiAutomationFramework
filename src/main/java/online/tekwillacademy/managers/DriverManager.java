@@ -14,6 +14,7 @@ public class DriverManager {
         switch (webDriverType){
             case "Chrome":
                 driver = new ChromeDriver();
+
                 System.out.println("Chrome driver was initiated");
                 break;
             case "Firefox":
@@ -31,6 +32,7 @@ public class DriverManager {
             default:
                 System.out.println("The webDriverType....");
         }
+        driver.manage().window().maximize();
     }
 
     public static DriverManager getInstance(){
